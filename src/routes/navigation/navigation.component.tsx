@@ -6,6 +6,7 @@ import CrwnLogo from '../../assets/crown.svg';
 import './navigation.styles.scss';
 
 const Navigation = () => {
+  console.log(CrwnLogo);
   return (
     <Fragment>
       <div className='navigation'>
