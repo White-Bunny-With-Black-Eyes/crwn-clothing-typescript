@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 import './category-item.styles.scss';
 
-const CategoryItem = ({ imageUrl, title }) => {
+export interface CategoryItemProps {
+  id?: number;
+  imageUrl: string;
+  title: string;
+}
+
+export type CategoriesItemsProps = CategoryItemProps[];
+
+const CategoryItem = ({ imageUrl, title }: CategoryItemProps) => {
   return (
     <div className='category-container'>
       <div

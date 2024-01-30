@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import CategoryItem from '../category-item/category-item.component';
+import { CategoryItemProps } from '../category-item/category-item.component';
+import { CategoriesItemsProps } from '../category-item/category-item.component';
 import './directory.styles.scss';
 
-const Directory = ({ categories }) => {
+const Directory = ({ categories }: { categories: CategoriesItemsProps }) => {
   return (
     <div className='directory-container'>
-      {categories.map((category) => {
+      {categories.map((category: CategoryItemProps) => {
         return (
           <CategoryItem
             key={category.id}
