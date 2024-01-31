@@ -8,6 +8,8 @@ import {
   signInWithGoogleRedirect,
 } from '../../utils/firebase/firebase.utils';
 
+import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
+
 const SingIn = () => {
   useEffect(() => {
     async function fetchAuthResult() {
@@ -38,6 +40,7 @@ const SingIn = () => {
       <button onClick={logGoogleRedirectUser}>
         Sign in with Google Redirect
       </button>
+      <SignUpForm />
     </div>
   );
 };
