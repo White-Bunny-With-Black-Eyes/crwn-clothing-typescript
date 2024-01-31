@@ -8,7 +8,7 @@ const SingIn = () => {
     try {
       console.log('Attempting to sign in with Google...');
       const { user } = await signInWithGooglePopup();
-      createUserDocumentFromAuth(user);
+      const userDocRef = await createUserDocumentFromAuth(user);
       console.log('Response received:', user);
     } catch (error) {
       console.error('Error signing in with Google:', error);
