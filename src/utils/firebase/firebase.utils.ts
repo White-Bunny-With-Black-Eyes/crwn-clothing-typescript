@@ -27,9 +27,10 @@ googleProvider.setCustomParameters({
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () =>
+// export const signInWithGooglePopup = () =>
+//   signInWithRedirect(auth, googleProvider);
+export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
-
 export const db = getFirestore();
 
 export const createUserDocumentFromAuth = async (userAuth: User) => {
@@ -38,6 +39,7 @@ export const createUserDocumentFromAuth = async (userAuth: User) => {
   console.log(userDocRef);
 
   const userSnapshot = await getDoc(userDocRef);
+
   console.log(userSnapshot);
   console.log(userSnapshot.exists());
 
